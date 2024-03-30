@@ -1,3 +1,4 @@
+#import "@preview/chic-hdr:0.4.0": *
 #import "@preview/unify:0.4.3": *
 #import "@local/linguify:0.4.0": *
 #import "@preview/oxifmt:0.2.0": strfmt
@@ -88,9 +89,10 @@
   student-no: none,
   student-name: none,
   faculty: none,
+  doc,
 ) = {
   let subtitle = [
-    #if hw-no != none {
+    #if exper-no != none {
       linguify("exper-ord", args: (exper-no: exper-no), from: __template_db)
     } else if week-no != none {
       linguify("exper-week", args: (week-no: week-no), from: __template_db)
@@ -135,6 +137,7 @@
   )
   set table(stroke: (thickness: 0.5pt, paint: black))
   set heading(numbering: "1.1.")
+  doc
 }
 
 // #let labreport(
