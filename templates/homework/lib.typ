@@ -1,0 +1,1 @@
+#import "通用作业.typ": conf as 通用作业, problem as hw-problem, solution as hw-solution
